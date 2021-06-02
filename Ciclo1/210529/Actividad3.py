@@ -22,5 +22,9 @@ for i in range(1,tam+1):
 #Modo Profesor
 filas_triangulo=input("Ingrese un número entero:\t")
 
-for i in range(1,int(filas_triangulo)+1)
-print (i)
+for i in range(1,int(filas_triangulo)+1):
+    fila=''
+    for j in range (i):
+        fila+='@'
+    fila+='\\'
+    print(fila)
