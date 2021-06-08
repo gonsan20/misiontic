@@ -1,19 +1,20 @@
-res1= 1.72*6*(9-6)
-res2= 20.0 + res1
+"""
+ladoA=int(input("Ingrese lado 1 de rectángulo:\t"))
+ladoB=int(input("Ingrese lado 2 de rectángulo:\t"))
 
-res3= 15.0 / res2/8
+Area= ladoB*ladoA
+Perimetro1= ladoB*2 + ladoA*2
+Perimetro2= (ladoB*2) + (ladoA*2)
 
-
-res4=2/2.0**3
-res5= 5.0/2.0+5*1.2*(2-5)/3
-res6= 8 + (6 - 9 * (7 - (8 + 6) * (9 - 9 / 7 * 8) % 8 + 6 * 9) - (6 ** 9)) ** 6
-
-print(res6)
-
-
-
+print(Area)
+print(Perimetro1)
+print(Perimetro2)
 
 """
-a + (b – c * (d – (a + b) * (c – c / d * a) % a + b * c) – (b ** c)) ** b
-8 + (6 - 9 * (7 - (8 + 6) * (9 – 9 / 7 * 8) % 8 + 6 * 9) – (6 ** 9)) ** 6
-"""
+
+total=0
+count=-200
+while count<=600:
+    total+=count
+    count+=1
+print(total)
