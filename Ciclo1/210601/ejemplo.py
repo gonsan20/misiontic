@@ -1,27 +1,18 @@
-"""
-ladoA=int(input("Ingrese lado 1 de rectángulo:\t"))
-ladoB=int(input("Ingrese lado 2 de rectángulo:\t"))
+n = 125
 
-Area= ladoB*ladoA
-Perimetro1= ladoB*2 + ladoA*2
-Perimetro2= (ladoB*2) + (ladoA*2)
+acmpio = [0] * (n + 1)
 
-print(Area)
-print(Perimetro1)
-print(Perimetro2)
+print (acmpio)
+mpio = int(input("Entre código de municipio "))
 
-"""
+while mpio != 0:
 
-a = input("entre un número ")
-b = input("entre otro número ")
-c = int(input("entre un tercer número "))
-d = int(input("entre un cuarto número "))
+            np = int(input("Entre número de personas "))
 
-if  b > a:
-    print(c+d, end=",")
-    print(a+b)
-else:
-    if a == b:
-        print(a, d)
-    else:
-        print(a, b, c, d, sep ="")
+            acmpio[mpio] = acmpio[mpio] + np
+
+            mpio = int(input("Entre código de municipio "))
+
+for i in range(1, n + 1):
+
+            print("Municipio", i, "Habitantes = ", acmpio[i])
