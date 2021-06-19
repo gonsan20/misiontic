@@ -22,7 +22,7 @@ def solucion():
         """Completa el llenado de cada casilla, el número debe ser entero y 
         aleatorio entre 1 y 9999.
         Sugerencia, usa random.randint"""
-        v.V[i] = random.randint(1,9999) #->[AN]Completado
+        v.V[i] = random.randint(10,30) #->[AN]Completado
         
         """Como el número es aleatorio entre 1 y 9999, habrá UNA (1) nueva casilla
         ocupada, por lo tanto, se debe ir alterando en UNO (1) la posición 0 del vector
@@ -44,7 +44,9 @@ def solucion():
         SÚMELO a la variable s
         Complete el siguiente condicional, para que sume solo los números primos
         o números que empiecen por dígito impar:"""
-        if es_primo(i ) or comienza_digito_impar(i): #Completar #->[AN]Completado
+        print("valida num -> ", i, " ", v.V[i])
+        if es_primo(v.V[i]) or comienza_digito_impar(v.V[i]): #Completar #->[AN]Completado
+            print("entro -> ", i, " ", v.V[i])
             s += v.V[i]
             
     #El ejercicio ha terminado, PRUEBA TU SOLUCIÓN (Click en la nave espacial)  
@@ -110,6 +112,7 @@ def comienza_digito_impar(n):
 
 def imprimeVector(vector, mensaje="vector sin nombre: \t"):
     print("\n", mensaje, end="        ")
+    print(vector.V[0] + 1)
     for i in range(1, vector.V[0] + 1):
         print(vector.V[i], end=", ")
         if i % 30 == 0:
