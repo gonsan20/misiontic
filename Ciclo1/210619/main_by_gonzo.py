@@ -72,7 +72,7 @@ def validar_repetidos(letra, letras):
         if letra == letras[i]:
             count+=1
     if count>1:
-        print("\nEsta letra ya ha sido ingresada")
+        print(f"\nLa letra {letra} ya ha sido ingresada")
         return True, letras, True
     else:
         return False, letras, False
@@ -119,7 +119,11 @@ letras=[]
 repetido= False
 
 while opcion<=2:
-    opcion=int(input("1. Ingresar Letra\n2. Adivinar Palabra\n3. Rendirse\n-->\t"))
+    try:
+        opcion=int(input("1. Ingresar Letra\n2. Adivinar Palabra\n3. Rendirse\n-->\t"))
+    except:
+        print("")
+
     if opcion == 1:
         letra = input("Ingrese una letra: ")
         repetido, letras, castigo = validar_repetidos(letra=letra, letras=letras)
@@ -161,6 +165,6 @@ while opcion<=2:
         ahorcado, oportunidades = aplicar_castigo(oportunidades=6)
 
     else:
-        input("Ingrese una opción válida")
+        input("Ingrese una opción válida entre 1 y 3")
         opcion = 0
 
