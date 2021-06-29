@@ -142,8 +142,8 @@ while opcion<=2:
             opcion=3
 
         #print(cadena_palabra)
-        #print(castigo)
-        #print(gano)
+        #print(f"Identifico si aplico castigo -> {castigo}")
+        #print(f"Identifico si ha ganado -> {gano}")
 
     elif opcion == 2:
         palabra_candidata = input("Ingrese la palabra: ")
